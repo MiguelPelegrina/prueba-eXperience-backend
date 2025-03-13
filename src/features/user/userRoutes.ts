@@ -3,7 +3,6 @@ import { UserController } from "./userController";
 
 const router = express.Router();
 
-// TODO Better HTTP practices
 /**
  * @route GET /users
  * @desc Fetch users with optional filtering & pagination
