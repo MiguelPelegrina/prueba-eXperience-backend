@@ -10,7 +10,7 @@ export class UserController {
     static getUsersByCriteria(req: Request, res: Response) {
         try {
             const pagination: PagingParams = {
-                page: parseInt(req.query.page as string) || 1,
+                page: parseInt(req.query.page as string) || 0,
                 limit: parseInt(req.query.limit as string) || 10
             };
 

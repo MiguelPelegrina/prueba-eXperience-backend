@@ -12,7 +12,7 @@ export class UserService {
      * Filters and paginates users based on query parameters
      */
    static filterUsers(queryParams: UserQueryRequest, pagination: PagingParams): UserResponse {
-    const { page = 1, limit = 10 } = pagination;
+    const { page = 0, limit = 10 } = pagination;
 
     // Normalize query parameters (lowercase & trim)
     const filters = Object.entries(queryParams).reduce((acc, [key, value]) => {
@@ -32,7 +32,7 @@ export class UserService {
     // Pagination logic
     const totalResults = filteredUsers.length;
     const totalPages = Math.ceil(totalResults / limit);
-    const startIndex = (page - 1) * limit;
+    const startIndex = (page ) * limit;
     const paginatedUsers = filteredUsers.slice(startIndex, startIndex + limit);
 
     return {
