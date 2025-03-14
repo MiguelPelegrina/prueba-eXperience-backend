@@ -1,5 +1,5 @@
 import express from "express";
-import { UserController } from "./userController";
+import { getUsersByCriteria } from "./userController";
 
 const router = express.Router();
 
@@ -7,6 +7,6 @@ const router = express.Router();
  * @route GET /users
  * @desc Fetch users with optional filtering & pagination
  */
-router.get("/users", UserController.getUsersByCriteria);
+router.get("/users", getUsersByCriteria);
 
 export default router;

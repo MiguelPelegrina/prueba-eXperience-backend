@@ -3,6 +3,7 @@ import express from 'express';
 import morgan from 'morgan';
 import userRoutes from './features/user/userRoutes';
 
+// Setup
 const app = express();
 const PORT = process.env.PORT || 3000;
 const router = express.Router();

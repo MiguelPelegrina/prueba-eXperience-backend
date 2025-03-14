@@ -1,7 +1,7 @@
 import { User } from "../models/user";
 
 /**
- * Users data
+ * User data
  */
 export const users: User[] = [
     {
@@ -13,7 +13,7 @@ export const users: User[] = [
     },
     {
         id: 2,
-        name: 'María',
+        name: 'Carlos',
         email: 'maria@example.com',
         firstSurname: 'Rodríguez',
         secondSurname: 'López',
